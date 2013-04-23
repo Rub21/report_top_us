@@ -101,7 +101,25 @@ $(document).ready(function() {
 
         removelayers();
         map.addLayer(mapbox.layer().id('ruben.' + mbtiles_id, function() {
+
+                        map.interaction.auto();
+            map.interaction.off('on');
             map.interaction.off('off');
+            map.interaction.on({
+                on: function(o) {
+                    var mydiv = document.getElementById('interactive');
+                    mydiv.style.display = 'block';
+                    document.getElementById('osm_user').innerHTML = o.data.osm_user;
+                    document.getElementById('edit_at').innerHTML = o.data.closed_at;
+                    document.getElementById('num_changes').innerHTML = o.data.num_changes;
+                },
+                off: function(o) {
+                    var mydiv = document.getElementById('interactive');
+                    mydiv.style.display = 'none';
+                }
+            });
+
+            
         }));
         map.interaction.refresh();
         $('#map').removeClass('loading');

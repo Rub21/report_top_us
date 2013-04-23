@@ -152,7 +152,7 @@ public class DAOUser {
         List list = new LinkedList();
         try {
             // String sql = "SELECT user_id , count(*) AS nun_edits FROM osm_changeset GROUP BY user_id ORDER BY nun_edits DESC limit 100;";
-            String sql = "SELECT user_id , count(*) AS nun_edits FROM osm_changeset GROUP BY user_id ORDER BY nun_edits DESC limit 52;";
+            String sql = "SELECT user_id , count(*) AS nun_edits FROM osm_changeset GROUP BY user_id ORDER BY nun_edits DESC limit 55;";
             pstmt = conn.prepareStatement(sql);
             rs = pstmt.executeQuery();
             int num = 0;

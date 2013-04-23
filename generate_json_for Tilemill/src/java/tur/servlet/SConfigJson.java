@@ -103,9 +103,7 @@ public class SConfigJson extends HttpServlet {
                         + "    \"MBmeta\": {}\n"
                         + "}";
 
-
-
-                if (i == 51) {
+                if (i == 54) {
                     query += a_proyect;
                 } else {
                     query += a_proyect + ",";

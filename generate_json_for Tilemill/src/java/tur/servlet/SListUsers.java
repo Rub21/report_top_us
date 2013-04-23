@@ -49,7 +49,7 @@ public class SListUsers extends HttpServlet {
         try {
 
             list_users = managerUser.list_idUsers();
-            for (int i = 0; i < list_users.size(); i++) {
+            for (int i = 52; i < list_users.size(); i++) {
 
                 String id_user = list_users.get(i) + "";
 
@@ -70,12 +70,7 @@ public class SListUsers extends HttpServlet {
 
                     System.out.println(outputFile.getAbsolutePath());
                 }
-
             }
-
-
-
-
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

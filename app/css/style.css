@@ -102,7 +102,7 @@ Loading
   overflow-y:scroll;
 }
 
-/*
+
 #interactive{
   display: none;
   position:absolute;
@@ -126,7 +126,7 @@ Loading
 }
 #interactive .left{
   font-weight: bold;
-}*/
+}
 
 .zoomer{
   top:48px;
